@@ -28,5 +28,6 @@ TMP_DATA=/usr/local/zabbix-agent-ops/var/iostat-data.tmp
 #
 iostat -kx 10 2 > $TMP_DATA
 mv $TMP_DATA $DEST_DATA
+#echo `date +%T_%F`>>/usr/local/zabbix-agent-ops/var/log
 
 

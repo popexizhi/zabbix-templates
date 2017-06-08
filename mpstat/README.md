@@ -20,7 +20,7 @@ if $tmp is err, crontab -e add iostat-cron.sh runing
 
 ### Import Template
 
-Import iostat-template.xml, and link it to a host.
+Import mpstat_template.xml, and link it to a host.
 
 
 CREDITS

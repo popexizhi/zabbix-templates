@@ -1,6 +1,14 @@
+#[tmp]
 .project
 .pydevproject
 .settings
+tmp
+.*.swp
 
 playbook/venv
+
+#[project]
+*/bin
+*/var
+
 

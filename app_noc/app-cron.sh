@@ -5,7 +5,8 @@ analysis_last_log(){
     local PH_DIR=$1 # log的文件夹位置
     local pre_log="/app_server_[0-9]*.log.txt*" #默认使用log的后缀
     local hostid_tmp=$2
-    filelist=`find ${PH_DIR} -mtime -1|grep ${pre_log}`
+    local lasttime=1
+    filelist=`find ${PH_DIR} -mtime -${lasttime}|grep ${pre_log}`
     datelab=`date -d "-1 min" +%m%d/%H%M` #过滤前一分钟的数据
     echo "[`date +%H%M`]${datelab}"
     

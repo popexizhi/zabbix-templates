@@ -6,6 +6,14 @@ echo `cat app-cron.sh` in crontab -e  or cp app-cron.sh in /etc/cron.d/
 zabbix_agentd con.d
 =====================================
 appserver-discovery.sh is find app_server hostid in log 
+appserver-check.sh is get epoll and client_num 
 
+zabbix server xml
+=====================================
+NOC_app_templates.xml 
+
+install
+=======================================
+./update_in_zabbix_agented_for_mpstat.sh
 
 

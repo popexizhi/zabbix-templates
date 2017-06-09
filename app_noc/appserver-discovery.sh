@@ -2,10 +2,10 @@
 get_app(){
     #分析最后的更新log使用
     local PH_DIR=$1 # log的文件夹位置
-    local pre_log="/app_server_[0-9]*.log.txt*" #默认使用log的后缀
+    local pre_log="app_server_[0-9]*.log.txt*" #默认使用log的后缀
     local hostid_dev=$2
-    filelist=`find ${PH_DIR} -mtime -1|grep ${pre_log}`
-    count=`find ${PH_DIR} -mtime -1|grep ${pre_log}| wc -l`
+    filelist=`find ${PH_DIR} -maxdepth 1 -mtime -1 -name "${pre_log}"`
+    count=`find ${PH_DIR} -maxdepth 1 -mtime -1 -name "${pre_log}"| wc -l`
     index=0
 
     echo '{"data":['
